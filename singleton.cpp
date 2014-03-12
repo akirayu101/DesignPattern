@@ -5,34 +5,34 @@
 template<typename T>
 class singleton{
 
-	public:
+public:
 
-		static boost::shared_ptr<T> getInstance()
-		{
-			if (singleton::instance == 0){
+	static boost::shared_ptr<T> getInstance()
+	{
+		if (singleton::instance == 0){
 				//here we need mutex and check(double check)
-				singleton::instance = boost::shared_ptr<T>(new T());
-			}
-			return singleton::instance;
+			singleton::instance = boost::shared_ptr<T>(new T());
 		}
+		return singleton::instance;
+	}
 
-		static void setVal(T val){
-			*singleton::instance = val;
-		}
+	static void setVal(T val){
+		*singleton::instance = val;
+	}
 
 
-	private:
-		singleton(T param)
-		{
-			_para = param;
-		}
-		singleton()
-		{
+private:
+	singleton(T param)
+	{
+		_para = param;
+	}
+	singleton()
+	{
 
-		}
-		T _para;
+	}
+	T _para;
 
-		static boost::shared_ptr<T> instance;
+	static boost::shared_ptr<T> instance;
 
 
 };
