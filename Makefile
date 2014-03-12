@@ -6,7 +6,8 @@ all :\
 	output/factorymethod\
 	output/abstractfactory\
 	output/prototype\
-	output/adapter
+	output/adapter\
+	output/bridge\
 
 
 	
@@ -22,6 +23,8 @@ output/abstractfactory : abstractfactory.cpp
 output/prototype : prototype.cpp
 	$(CC) $^ -o $@
 output/adapter : adapter.cpp
+	$(CC) $^ -o $@
+output/bridge : bridge.cpp
 	$(CC) $^ -o $@
 clean: 
 	rm -rf output/*
