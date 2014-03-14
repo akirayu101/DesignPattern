@@ -8,6 +8,7 @@ all :\
 	output/prototype\
 	output/adapter\
 	output/bridge\
+	output/flyweight\
 
 
 	
@@ -25,6 +26,8 @@ output/prototype : prototype.cpp
 output/adapter : adapter.cpp
 	$(CC) $^ -o $@
 output/bridge : bridge.cpp
+	$(CC) $^ -o $@
+output/flyweight : flyweight.cpp
 	$(CC) $^ -o $@
 clean: 
 	rm -rf output/*
