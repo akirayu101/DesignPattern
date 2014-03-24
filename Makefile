@@ -9,6 +9,7 @@ all :\
 	output/adapter\
 	output/bridge\
 	output/flyweight\
+	output/state\
 
 
 	
@@ -29,5 +30,9 @@ output/bridge : bridge.cpp
 	$(CC) $^ -o $@
 output/flyweight : flyweight.cpp
 	$(CC) $^ -o $@
+output/state : state.cpp
+	$(CC) $^ -o $@
+
+
 clean: 
 	rm -rf output/*
