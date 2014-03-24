@@ -24,13 +24,19 @@ public:
 private:
 	singleton(T param)
 	{
-		_para = param;
 	}
 	singleton()
 	{
 
 	}
-	T _para;
+
+	singleton(singleton<T> & rhs){
+
+	}
+
+	singleton<T> & operator==(const singleton<T> &rhs){
+		return ;
+	}
 
 	static boost::shared_ptr<T> instance;
 
